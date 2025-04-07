@@ -6,7 +6,7 @@ This project is a comprehensive tool for estimating software development effort,
 
 ## 🧮 Try the Project
 
-[![Trye the Cocomo Calculator](https://img.shields.io/badge/Try%20the%20QR%20Code%20Generator-4CAF50?style=for-the-badge&logo=vercel&logoColor=white)]()
+[![Trye the Cocomo Calculator](https://img.shields.io/badge/Try%20the%20QR%20Code%20Generator-4CAF50?style=for-the-badge&logo=vercel&logoColor=white)](https://cocomo-calculator-theta.vercel.app/)
 
 ---
 
