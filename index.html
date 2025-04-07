@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Hace que la página sea responsiva en dispositivos móviles -->
+    <title>Cocomo Calculator</title>                                        <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="/css/styles.css">                          <!-- Enlace al archivo de estilos CSS -->
+    <link rel="icon" href="/img/Logo.png" type="image/png">                 <!-- Define el ícono que aparece en la pestaña del navegador -->
+</head>
+
+<header>
+    <h1 class="header-title">
+        <img src="/img/Logo.png" alt="CocomoII Logo" class="logo">          <!-- Logo de la aplicación -->
+        Cocomo Calculator                                                   <!-- Título principal de la aplicación -->
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Baker Calculator</a></li>                      <!-- Enlace para mostrar la calculadora Baker -->
+            <li><a href="#kutcher-cocomo-calculator">Kutcher Calculator</a></li>    <!-- Enlace para mostrar la calculadora Kutcher -->
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="toggle-buttons">
+        <button id="toggle-language" type="button">Cambiar a Español</button>       <!-- Botón para cambiar el idioma de la aplicación -->
+        <button id="toggle-theme" type="button">Modo Oscuro</button>                <!-- Botón para alternar entre modo claro y oscuro -->
+    </div>
+    <form id="cocomo-form">
+        <h2 id="form-title">Select Project Mode</h2>                                <!-- Título del formulario para seleccionar el modo del proyecto -->
+        <div id="project-modes">
+            <label>
+                <input type="radio" name="project-mode" value="organic" checked> Organic Mode       <!-- Opción para seleccionar el modo Orgánico -->
+            </label>
+            <label>
+                <input type="radio" name="project-mode" value="semi-detached"> Semi-detached Mode   <!-- Opción para seleccionar el modo Semi-desacoplado -->
+            </label>
+            <label>
+                <input type="radio" name="project-mode" value="embedded"> Embedded Mode              <!-- Opción para seleccionar el modo Empotrado -->
+            </label>
+        </div>
+        <div>
+            <label for="sloc" id="sloc-label">Estimated SLOC (Source Lines of Code):</label>        <!-- Etiqueta para el campo de entrada de SLOC -->
+            <input type="number" id="sloc" name="sloc" placeholder="Enter SLOC" required>           <!-- Campo para ingresar las líneas de código estimadas -->
+        </div>
+        <button id="calculate-cocomo" type="button">Calculate COCOMO</button>                       <!-- Botón para calcular COCOMO -->
+        <div id="cocomo-result"></div>                                                              <!-- Contenedor para mostrar los resultados del cálculo -->
+    </form>
+
+    <div id="kutcher-cocomo-calculator" class="hidden-section">
+        <h2 id="kutcher-calculator-title">Kutcher's Basic COCOMO Calculator!</h2>                   <!-- Título de la calculadora Kutcher -->
+        <p id="kutcher-calculator-description">
+            Enter the number of estimated lines of code and the calculator will determine how much time and how many people will be needed! <!-- Descripción de la calculadora Kutcher -->
+        </p>
+        <div>
+            <label for="kutcher-sloc" id="kutcher-sloc-label">Thousands of Lines of Estimated Code:</label>    <!-- Etiqueta para el campo de entrada de KLOC -->
+            <input type="number" id="kutcher-sloc" name="kutcher-sloc" placeholder="Enter KLOC" required>      <!-- Campo para ingresar las líneas de código estimadas en miles -->
+        </div>
+        <button id="calculate-kutcher-cocomo" type="button">Calculate</button>                                 <!-- Botón para calcular Kutcher COCOMO -->
+        <div id="kutcher-cocomo-result">
+            <h3 id="organic-title">Organic Values</h3>                                                         <!-- Título para los resultados del modo Orgánico -->
+            <p>Number of Months Needed: <span id="organic-months">-</span></p>                                 <!-- Resultado: Meses necesarios para el modo Orgánico -->
+            <p>Number of People Needed: <span id="organic-people">-</span></p>                                 <!-- Resultado: Personas necesarias para el modo Orgánico -->
+            <h3 id="semi-detached-title">SemiDetached Values</h3>                                              <!-- Título para los resultados del modo Semi-desacoplado -->
+            <p>Number of Months Needed: <span id="semi-detached-months">-</span></p>                           <!-- Resultado: Meses necesarios para el modo Semi-desacoplado -->
+            <p>Number of People Needed: <span id="semi-detached-people">-</span></p>                           <!-- Resultado: Personas necesarias para el modo Semi-desacoplado -->
+            <h3 id="embedded-title">Embedded Values</h3>                                                       <!-- Título para los resultados del modo Empotrado -->
+            <p>Number of Months Needed: <span id="embedded-months">-</span></p>                                <!-- Resultado: Meses necesarios para el modo Empotrado -->
+            <p>Number of People Needed: <span id="embedded-people">-</span></p>                                <!-- Resultado: Personas necesarias para el modo Empotrado -->
+        </div>
+    </div>
+
+    <div id="legend-container">
+        <h3 id="legend-title" onclick="toggleLegend()">
+            Acronyms Used <span id="legend-icon">▼</span>                                               <!-- Título de la sección de abreviaciones con un ícono desplegable -->
+        </h3>
+        <ul id="legend-list" class="hidden">
+            <li><strong>VL</strong>: Very Low</li>              <!-- Abreviación: Muy Bajo -->
+            <li><strong>L</strong>: Low</li>                    <!-- Abreviación: Bajo -->
+            <li><strong>N</strong>: Nominal</li>                <!-- Abreviación: Nominal -->
+            <li><strong>H</strong>: High</li>                   <!-- Abreviación: Alto -->
+            <li><strong>VH</strong>: Very High</li>             <!-- Abreviación: Muy Alto -->
+            <li><strong>XH</strong>: eXtra High</li>            <!-- Abreviación: Extra Alto -->
+        </ul>
+    </div>
+
+    <div id="attributes-container"></div>                       <!-- Contenedor para los atributos dinámicos -->
+
+    <script src="/scripts/script.js"></script>                  <!-- Enlace al archivo JavaScript principal -->
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+/******************************************************************
+ *                          GENERAL STYLES                        *
+ ******************************************************************/
+ body {
+	font-family: Arial, sans-serif;      	/* Fuente principal           */
+	margin: 0;                          		/* Sin margen                 */
+	padding: 0;                         		/* Sin padding                */
+	background-color: #f4f4f9;         		/* Fondo claro                */
+	color: #333;                       		/* Texto oscuro               */
+}
+
+/******************************************************************
+ *                           HEADER STYLES                        *
+ ******************************************************************/
+header {
+	background-color: #4CAF50;         		/* Fondo verde                */
+	color: white;                      		/* Texto blanco               */
+	padding: 1rem 0;                  		/* Espaciado vertical         */
+	text-align: center;               		/* Centrar texto              */
+	border-bottom: none;                		/* Elimina cualquier borde inferior */
+}
+
+header h1 {
+	margin: 0;                           		/* Sin margen                 */
+	font-size: 2.5rem;                  		/* Tamaño de fuente aumentado */
+	font-weight: bold;                  		/* Fuente en negrita          */
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.3);	/* Sombra sutil en el texto   */
+	/* Se ha eliminado el borde inferior para quitar la línea en blanco */
+	padding-bottom: 0.5rem;              		/* Espaciado inferior         */
+}
+
+/* Estilos del logo */
+.logo {
+	width: 60px;                       		/* Ajusta el ancho del logo   */
+	height: auto;                      		/* Mantiene la proporción     */
+	margin-right: 20px;                		/* Incrementa el espaciado    */
+	display: inline-block;             		/* Comportamiento inline-block */
+}
+
+/* Estilos del título del encabezado */
+.header-title {
+	display: flex;                     		/* Coloca el logo y el texto en fila */
+	align-items: center;               		/* Alinea verticalmente       */
+	justify-content: center;           		/* Centra horizontalmente     */
+	gap: 20px;                        		/* Espaciado entre logo y texto */
+	font-size: 2rem;                   		/* Incrementa el tamaño de fuente */
+	font-weight: bold;                 		/* Texto en negrita           */
+	padding: 10px 20px;                		/* Relleno para separación    */
+}
+
+/******************************************************************
+ *                        NAVIGATION STYLES                       *
+ ******************************************************************/
+nav ul {
+    list-style: none;                  		/* Elimina viñetas            */
+    padding: 0;                       		/* Sin padding                */
+    margin: 0;                        		/* Sin margen                 */
+    display: flex;                    		/* Organiza en fila           */
+    justify-content: center;          		/* Centra los elementos       */
+    gap: 1rem;                       		/* Espaciado entre elementos  */
+}
+
+nav ul li a {
+    text-decoration: none;             		/* Sin subrayado              */
+    color: #ffffff;                   		/* Texto en verde principal   */
+    font-weight: bold;               		/* Texto en negrita           */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Transición suave para hover */
+    /* Se elimina el pseudo-elemento usado para subrayado */
+    padding: 0.3rem 0.6rem;           		/* Relleno interno para efecto hover */
+    border-radius: 4px;              		/* Bordes redondeados        */
+}
+
+nav ul li a:hover {
+    background-color: rgba(76, 175, 80, 0.2);	/* Fondo sutil al pasar el cursor */
+    transform: scale(1.05);          		/* Incrementa ligeramente el tamaño */
+    color: #45a049;                  		/* Cambia el color a un verde más oscuro */
+}
+
+/* Estilos para los enlaces en modo oscuro */
+body.dark-mode nav ul li a {
+    color: #f4f4f9; /* Texto claro para modo oscuro */
+}	
+/******************************************************************
+ *                  FORM AND RESULTS SECTION                    *
+ ******************************************************************/
+#cocomo-form {
+	display: flex;
+	flex-direction: column;          		/* Organiza elementos en columna */
+	align-items: center;             		/* Centra horizontalmente     */
+	margin: 2rem auto;               		/* Margen vertical y centrado */
+	padding: 1rem;                  		/* Espaciado interno          */
+	max-width: 800px;               		/* Ancho máximo permitido     */
+	background-color: white;       		/* Fondo blanco para contraste*/
+	border-radius: 8px;              		/* Bordes redondeados        */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);	/* Sombra para dar profundidad*/
+}
+
+#cocomo-form h2 {
+	color: #4CAF50;                 		/* Título en verde para resaltar */
+	margin-bottom: 1rem;             		/* Separación inferior        */
+}
+
+#cocomo-form div {
+	margin-bottom: 1rem;             		/* Espacio entre bloques      */
+	text-align: center;              		/* Centrar texto              */
+}
+
+#cocomo-form label {
+	font-weight: bold;              		/* Etiqueta en negrita        */
+	margin-right: 0.5rem;            		/* Espacio a la derecha       */
+}
+
+#cocomo-form input[type="number"] {
+	padding: 0.5rem;               		/* Espaciado interno del input*/
+	border: 1px solid #ddd;        		/* Borde gris claro           */
+	border-radius: 4px;             		/* Bordes redondeados         */
+	width: 100%;                   		/* Ocupa todo el ancho        */
+	max-width: 300px;              		/* Limita el ancho máximo     */
+	box-sizing: border-box;        		/* Incluye padding y borde en el ancho */
+}
+
+button#calculate-cocomo {
+	margin-top: 1rem;              		/* Separación superior        */
+	padding: 0.75rem 1.5rem;        	 		/* Espaciado interno          */
+	background-color: #4CAF50;     	 		/* Botón en color verde       */
+	color: white;                  		/* Texto blanco               */
+	border: none;                  		/* Sin borde                  */
+	border-radius: 4px;            		/* Bordes redondeados         */
+	font-size: 1rem;               		/* Tamaño de fuente estándar  */
+	cursor: pointer;               		/* Cambia el cursor           */
+	transition: background-color 0.3s ease;	/* Transición suave para hover*/
+}
+
+button#calculate-cocomo:hover {
+	background-color: #45a049;  		/* Color más oscuro al pasar el cursor */
+}
+
+#cocomo-result {
+	margin-top: 1rem;              		/* Separación superior        */
+	font-size: 1.2rem;             		/* Tamaño de fuente mayor     */
+	font-weight: bold;             		/* Texto en negrita           */
+	color: #4CAF50;               		/* Texto en color verde       */
+	text-align: center;            		/* Centrar el resultado       */
+}
+
+/******************************************************************
+ *                    ATTRIBUTES CONTAINER                      *
+ ******************************************************************/
+#attributes-container {
+	display: grid;                  		/* Usa grid para organizar atributos */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));	/* Columnas responsivas */
+	gap: 1.5rem;                   		/* Espacio entre grid items   */
+	margin: 2rem auto;             		/* Centrado y margen vertical */
+	padding: 1rem;                 		/* Padding interno            */
+	max-width: 1200px;            		/* Ancho máximo               */
+	background-color: white;       		/* Fondo blanco               */
+	border-radius: 8px;            		/* Bordes redondeados         */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);	/* Sombra para profundidad    */
+}
+
+#attributes-container > div {
+	background-color: #f9f9f9;     		/* Fondo ligeramente gris     */
+	border: 1px solid #ddd;        		/* Borde gris claro           */
+	border-radius: 8px;           		/* Bordes redondeados         */
+	padding: 1rem;               		/* Espaciado interno          */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);	/* Sombra pequeña             */
+}
+
+#attributes-container h3 {
+	color: #4CAF50;               		/* Título en verde para resaltar */
+	border-bottom: 2px solid #4CAF50;		/* Línea decorativa inferior  */
+	padding-bottom: 0.5rem;        		/* Espaciado debajo del título */
+	margin-bottom: 1rem;           		/* Separación inferior        */
+	text-align: center;            		/* Centrado                   */
+}
+
+#attributes-container p {
+	font-weight: bold;             		/* Texto en negrita           */
+	margin: 1rem 0 0.5rem;          		/* Márgenes: superior, inferior y entre párrafos */
+	text-align: center;            		/* Centrado                   */
+}
+
+/* Alinea los radio buttons en línea junto a un párrafo */
+#attributes-container p + label {
+	display: inline-flex;         		/* Flex para alineación horizontal */
+	margin-right: 1rem;           		/* Margen a la derecha        */
+	align-items: center;         		/* Centrado vertical          */
+}
+
+/* Asegura el espaciado correcto en párrafos dentro del contenedor */
+#attributes-container p {
+	margin-bottom: 0.5rem;        	 		/* Margen inferior            */
+	font-weight: bold;            	 		/* Texto en negrita           */
+	text-align: left;             	 		/* Alineación a la izquierda  */
+}
+
+/******************************************************************
+ *                          RADIO INPUTS                          *
+ ******************************************************************/
+input[type="radio"] {
+	appearance: none;             		/* Quita estilos por defecto  */
+	-webkit-appearance: none;     		/* Compatibilidad webkit      */
+	-moz-appearance: none;        		/* Compatibilidad Mozilla     */
+	width: 20px;                 		/* Ancho del radio            */
+	height: 20px;                		/* Alto del radio             */
+	border: 2px solid #4CAF50;    		/* Borde en color verde       */
+	border-radius: 50%;          	 		/* Redondeado completo        */
+	outline: none;              	 		/* Sin outline                */
+	cursor: pointer;           	 		/* Cursor pointer             */
+	transition: background-color 0.3s ease, border-color 0.3s ease;  /* Transición suave */
+}
+
+input[type="radio"]:checked {
+	background-color: #4CAF50;   		/* Fondo verde al seleccionar */
+	border-color: #4CAF50;       	 		/* Mismo color en el borde    */
+}
+
+input[type="radio"]:hover {
+	border-color: #45a049;       	 		/* Cambia color al pasar el cursor */
+	background-color: rgba(76, 175, 80, 0.2);	/* Efecto hover sutil         */
+}
+
+/******************************************************************
+ *                        TOGGLE BUTTONS                          *
+ ******************************************************************/
+.toggle-buttons {
+	display: flex;             		/* Organiza en fila           */
+	justify-content: center;   	 		/* Centra los botones         */
+	gap: 1rem;               	 		/* Espacio entre botones      */
+	margin: 1rem auto;       	 		/* Margen superior/inferior centrado */
+}
+
+button#toggle-language,
+button#toggle-theme {
+	display: inline-block;  		/* Bloque en línea            */
+	margin: 0.5rem;           		/* Margen en cada botón       */
+	padding: 0.75rem 1.5rem;   		/* Espaciado interno          */
+	background-color: #4CAF50;		/* Fondo verde                */
+	color: white;            	 		/* Texto blanco               */
+	border: none;             	 		/* Sin borde                  */
+	border-radius: 8px;       	 		/* Bordes redondeados         */
+	font-size: 1rem;          	 		/* Tamaño de fuente           */
+	font-weight: bold;        	 		/* Texto en negrita           */
+	cursor: pointer;         	 		/* Cambia el cursor           */
+	transition: background-color 0.3s ease, transform 0.2s ease;  /* Transición suave */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);	/* Sombra para dar profundidad */
+}
+
+button#toggle-language:hover,
+button#toggle-theme:hover {
+	background-color: #45a049; 		/* Color más oscuro en hover  */
+	transform: translateY(-2px);		/* Efecto de elevación         */
+}
+
+button#toggle-language:active,
+button#toggle-theme:active {
+	transform: translateY(0);  		/* Restablece posición al hacer clic */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);	/* Sombra reducida al presionar */
+}
+
+/******************************************************************
+ *                         LEGEND CONTAINER                         *
+ ******************************************************************/
+#legend-container {
+	margin: 2rem auto;        	 		/* Margen vertical y centrado  */
+	padding: 1rem;             	 		/* Padding interno             */
+	max-width: 800px;          	 		/* Ancho máximo                */
+	background-color: white;  	 		/* Fondo blanco                */
+	border-radius: 8px;         	 		/* Bordes redondeados          */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);	/* Sombra ligera               */
+	text-align: center;        	 		/* Centrado de texto           */
+	cursor: pointer;           	 		/* Cursor pointer              */
+}
+
+#legend-container h3 {
+	color: #4CAF50;          	 		/* Título en verde             */
+	margin-bottom: 0.5rem;      		/* Margen inferior             */
+	user-select: none;        	 		/* Evita selección accidental  */
+}
+
+#legend-container ul {
+	list-style: none;          	 		/* Sin viñetas                 */
+	padding: 0;               	 		/* Sin padding                 */
+	margin: 0;                	 		/* Sin margen                  */
+	transition: max-height 0.3s ease, opacity 0.3s ease;	/* Transición para ocultar/mostrar */
+	overflow: hidden;         	 		/* Oculta contenido desbordado */
+}
+
+#legend-container ul.hidden {
+	max-height: 0;           	 		/* Oculta con altura cero      */
+	opacity: 0;              	 		/* Oculta visualmente          */
+	pointer-events: none;    	 		/* Desactiva interacción       */
+}
+
+#legend-container ul:not(.hidden) {
+	max-height: 200px;       	 		/* Altura máxima visible       */
+	opacity: 1;              	 		/* Totalmente visible          */
+	pointer-events: auto;    	 		/* Permite interacción         */
+}
+
+#legend-container li {
+	margin: 0.5rem 0;        	 		/* Separación vertical entre elementos */
+	font-size: 1rem;         	 		/* Tamaño de fuente           */
+}
+
+/* Estilos para el título y el icono en la leyenda */
+#legend-title {
+	display: flex;           	 		/* Flex para alinear          */
+	justify-content: center; 	 		/* Centrado horizontal         */
+	align-items: center;     	 		/* Centrado vertical           */
+	gap: 0.5rem;            	 		/* Espaciado entre título e icono */
+	cursor: pointer;         	 		/* Cursor pointer              */
+}
+
+#legend-icon {
+	font-size: 1rem;         	 		/* Tamaño del icono            */
+	transition: transform 0.3s ease;		/* Transición para el giro     */
+}
+
+/* Selector para girar el icono cuando la lista está visible */
+#legend-list:not(.hidden) + #legend-icon {
+	transform: rotate(180deg);
+}
+
+/******************************************************************
+ *                          DARK MODE STYLES                        *
+ ******************************************************************/
+body.dark-mode {
+	background-color: #121212;  		/* Fondo oscuro para dark mode */
+	color: #f4f4f9;         	 		/* Texto claro para contraste  */
+}
+
+body.dark-mode header {
+	background-color: #1e1e1e;  		/* Fondo del header en dark mode */
+}
+
+body.dark-mode #cocomo-form,
+body.dark-mode #attributes-container {
+	background-color: #1e1e1e;  		/* Fondo oscuro para formularios y contenedores */
+	color: #f4f4f9;         	 		/* Texto claro                 */
+	border-color: #333;     	 		/* Bordes en tono oscuro       */
+}
+
+body.dark-mode #attributes-container > div {
+	background-color: #333;    		/* Fondo aún más oscuro para elementos individuales */
+	border-color: #444;     	 		/* Bordes ligeramente más claros */
+}
+
+body.dark-mode #attributes-container h3 {
+	color: #4CAF50;        	 		/* Mantiene el verde para títulos */
+}
+
+body.dark-mode button {
+	background-color: #333;  		/* Botones en fondo oscuro     */
+	color: #f4f4f9;         	 		/* Texto claro en botones      */
+}
+
+body.dark-mode button:hover {
+	background-color: #444;  		/* Hover en botones dark mode  */
+}
+
+body.dark-mode input[type="number"] {
+	background-color: #333;  		/* Input en fondo oscuro       */
+	color: #f4f4f9;         	 		/* Texto claro en input        */
+	border-color: #444;     	 		/* Borde en tono oscuro        */
+}
+
+body.dark-mode #legend-container {
+	background-color: #1e1e1e;  		/* Fondo oscuro para leyendas  */
+	color: #f4f4f9;         	 		/* Texto claro                 */
+	border-color: #333;     	 		/* Bordes oscuros              */
+}
+
+body.dark-mode #legend-container h3 {
+	color: #4CAF50;        	 		/* Título en verde para resaltar */
+}
+
+/******************************************************************
+ *             KUTCHER'S BASIC COCOMO CALCULATOR STYLES           *
+ ******************************************************************/
+#kutcher-cocomo-calculator {
+	margin: 2rem auto;       	 		/* Margen y centrado           */
+	padding: 1rem;           	 		/* Padding interno             */
+	max-width: 800px;        		/* Ancho máximo               */
+	background-color: white; 		/* Fondo blanco               */
+	border-radius: 8px;       	 		/* Bordes redondeados          */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);	/* Sombra sutil               */
+	text-align: center;      	 		/* Centrado de contenido      */
+}
+
+body.dark-mode #kutcher-cocomo-calculator {
+	background-color: #1e1e1e;  		/* Fondo oscuro en dark mode   */
+	color: #f4f4f9;         	 		/* Texto claro                */
+	border-color: #333;     	 		/* Borde oscuro               */
+}
+
+#kutcher-cocomo-calculator h2,
+#kutcher-cocomo-calculator p {
+	color: inherit;         	 		/* Hereda el color definido   */
+}
+
+#kutcher-cocomo-calculator input[type="number"] {
+	padding: 0.5rem;        	 		/* Espaciado interno          */
+	border: 1px solid #ddd;  		/* Borde gris claro           */
+	border-radius: 4px;      	 		/* Bordes redondeados         */
+	width: 100%;            	 		/* Ancho completo             */
+	max-width: 300px;       	 		/* Ancho máximo               */
+	box-sizing: border-box;  		/* Incluye padding y borde     */
+}
+
+body.dark-mode #kutcher-cocomo-calculator input[type="number"] {
+	background-color: #333;  		/* Fondo oscuro para inputs   */
+	color: #f4f4f9;         	 		/* Texto claro                */
+	border-color: #444;     	 		/* Borde oscuro               */
+}
+
+#calculate-kutcher-cocomo {
+	margin-top: 1rem;       	 		/* Separación superior        */
+	padding: 0.75rem 1.5rem;  		/* Espaciado interno          */
+	background-color: #4CAF50;		/* Botón en verde             */
+	color: white;           	 		/* Texto en blanco            */
+	border: none;           	 		/* Sin borde                  */
+	border-radius: 4px;     	 		/* Bordes redondeados         */
+	font-size: 1rem;        	 		/* Tamaño de fuente           */
+	cursor: pointer;       	 		/* Cursor pointer             */
+	transition: background-color 0.3s ease;	/* Transición suave           */
+}
+
+#calculate-kutcher-cocomo:hover {
+	background-color: #45a049;		/* Color de hover para el botón */
+}
+
+#calculate-kutcher-cocomo:active {
+	transform: translateY(2px);		/* Efecto al hacer clic (presionado) */
+}
+
+#calculate-kutcher-cocomo:focus {
+	outline: none;          	 		/* Sin outline en foco        */
+	box-shadow: 0 0 5px #4CAF50;  		/* Sombra de foco para resaltar */
+}
+
+/******************************************************************
+ *                      HIDDEN SECTIONS                           *
+ ******************************************************************/
+.hidden-section {
+	display: none;        	 		/* Secciones ocultas por defecto */
+}
+
+.hidden-section.active {
+	display: block;       	 		/* Sección visible cuando se activa */
+}
