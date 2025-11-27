@@ -91,5 +91,5 @@ Feel free to reach out or contribute:
 
 - **LinkedIn**: [Cesar Gonzalez](https://www.linkedin.com/in/cesar-gonzalez)
 - **GitHub**: [ICaesarI](https://github.com/ICaesarI)
-- **Email**: cesar.gonzalez6194@alumnos.udg.mx
+- **Email**: cesar.gonzalez.anayadev@gmail.com
 
